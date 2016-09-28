@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Stock Assistant</title>
+    <!-- include react -->
+    <script src="./node_modules/react/dist/react-with-addons.js"></script>
+</head>
+    <body>
+    <div class="header-panel shadow-z-2">
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="text-primary"><strong>My Stock Assistant</strong></h1>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid main" style="height: 559px;">
+          <div class="row">
+            <div class="container">
+                <div class='card'>
+                    <div class="input-group">
+                        <span class="input-group-addon">Symbol</span>
+                          <input type="text" id="inputSuccess" class="form-control">
+                          <span class="input-group-btn">
+                              <button class="btn btn-raised btn-success btn-lg" type="button" id="getStock">GO</button>
+                        </span>
+                    </div>
+                </div>
+                <div id="content">
+                    <!-- this is where the root react component will get rendered -->
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- include the webpack-dev-server script so our scripts get reloaded when we make a change -->
+        <!-- we'll run the webpack dev server on port 8090, so make sure it is correct -->
+        <script src="http://localhost:8090/webpack-dev-server.js"></script>
+        <!-- include the bundle that contains all our scripts, produced by webpack -->
+        <!-- the bundle is served by the webpack-dev-server, so serve it also from localhost:8090 -->
+        <script type="text/javascript" src="http://localhost:8090/assets/bundle.js"></script>
+    </body>
+</html>
